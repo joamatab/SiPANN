@@ -151,8 +151,8 @@ def costFunction_FSR(x, grad):
     powerSim = throughPort[peaksSim]
 
     if wavelengthSim.size > numPeaks:
-        wavelengthSim = wavelengthSim[0:numPeaks]
-        powerSim = powerSim[0:numPeaks]
+        wavelengthSim = wavelengthSim[:numPeaks]
+        powerSim = powerSim[:numPeaks]
     elif wavelengthSim.size < numPeaks:
         wavelengthSim = np.append(
             wavelengthSim, np.zeros((numPeaks - wavelengthSim.size,))
