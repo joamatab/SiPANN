@@ -131,15 +131,19 @@ setup(
         "tensorflow",
         "gdspy >= 1.5.2",
         "scikit-rf",
-        "numba",
         "numpy>=1.22;python_version>='3.8'",
         "numpy<1.22;python_version=='3.7'",
         "simphony",
-        "nlopt==2.7.1",
         "matplotlib",
         "tables",
         "tqdm",
     ],
+    extras_require={
+        "opt": [
+            "numba",
+            "nlopt==2.7.1",
+        ]
+    }
     # List additional groups of dependencies here (e.g. development
     # dependencies). Users will be able to install these using the "extras"
     # syntax, for example:
